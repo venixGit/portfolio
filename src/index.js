@@ -1,5 +1,3 @@
-import { crearHtml } from './js/componentes';
+// import { particlesJS } from './js/componentes';
 import './styles.css';
 
-
-crearHtml();
