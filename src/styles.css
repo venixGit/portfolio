@@ -5,7 +5,26 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none; /*subrayado */
+    font-family: var(--secondary-font);
+    color: var(--color);
+    scroll-behavior: smooth;
+    
 }
+
+/*html {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 12px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #e7e7e7;
+    background: rgb(19, 19, 19);
+    background: rgb(23, 32, 42);
+    
+}*/
+
+
+
+
 
 
 /*Ancho maximo del div, pading justificado*/
@@ -30,7 +49,6 @@
     background: rgb(31, 97, 141);
 }
 
-
 .navbar .max-width{
     display: flex; /*Alinear con el logo*/
     align-items: center; /*centrar los items*/
@@ -43,7 +61,6 @@
     display: inline-block; /* alinear horizontal*/
 }
 
-
 .navbar .menu li a{
     display: block;
     color: #fff;
@@ -55,7 +72,6 @@
 
 .navbar .menu li a:hover{
     color: black;
-    
 }
 
 /*Cambiar de color al colocar el puntero*/
@@ -70,10 +86,6 @@
     /* font-family: 'Ubuntu', sans-serif;  */
 }
 
-span {
-    color:black;
-}
-
 /* menu btn styling */
 .menu-btn{
     color: #fff;
@@ -82,37 +94,4 @@ span {
     display: none;
 }
 
-html {
-    /* font-family: "Share Tech Mono", monospace; */
-    font-size: 12px;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    /* color: #e7e7e7; */
-    /* background: rgb(19, 19, 19); */
-    background: rgb(23, 32, 42);
-    
-}
 
-/*HEADER*/
-/* header {
-    width: 100%;
-    height: 5rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}  */
-
-/*FOOTER*/
-/* footer {
-    width: 100%;
-    max-width: 70rem;
-    margin: auto;
-    padding: 2.5rem;
-    color: #8a8a8a;
-    text-align: center;
-    font-size: 1.2rem;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-} */
