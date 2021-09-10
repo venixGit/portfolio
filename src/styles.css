@@ -252,19 +252,19 @@ body{
 }
 
 /*div que contiene todas las habilidades*/
-.skills_box {
+.habilidades {
     flex-wrap: wrap;
 }
 
 /*Div de habilidad*/
-.skills_box .box{
+.habilidades .box{
     margin: 2em 2em;
     width: 15em;
     height: 12em;
     background: var( --bg-dark );
-    background: rgba(255, 255, 255. 0.089);
+    background: rgba(255, 255, 255, 0.089); /*pone transparente el div*/
     backdrop-filter: blur(20px);/*se sobre pone sobre el circulo*/
-    border: 1px solid rgba(255, 255, 255. 0.068);
+    border: 1px solid rgba(255, 255, 255, 0.068);
     border-bottom: none;
     display: flex;
     justify-content: center;
@@ -275,32 +275,24 @@ body{
     z-index: 1;
 }
 
-.skills_box .box::before{
+.habilidades .box::before {
     content: "";
     position: absolute;
-    background: var( --secondary-color );
+    background: var(--secondary-color);
     left: 0;
     bottom: 0;
-    width: 100%;/*pinta los cuadros de color rosa*/
-    height: 100%; /*pinta de color rosa*/
-    z-index: -1; /*muestra el texto del div*/
-    transform-origin:bottom;
-    transform: scaleY(0.03);/*muestra el borde inferior de color rosa*/
-    transition: all 0.3s;/*tiempo que demora la transicion del rellenado de color*/
-
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: bottom;
+    transform: scaleY(0.03);
+    transition: all 0.3s;
 }
 
-.skills_box .box::hover::before {
+.habilidades .box:hover::before {
     transform: scaleY(1);
 }
 
-/*margen del icono*/
-.skills_box .box i{
+.habilidades .box i {
     margin-bottom: 0.1em;
-}
-
-/*Parrafo*/
-.skills_head {
-    font-size: 6em;
-    font-family: var(--font);
 }
