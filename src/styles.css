@@ -21,6 +21,7 @@
     --about: #1a1a1a;
     --skills1: #8e2de2;
     --skills2: #f953c6;
+    --projects: #1a1a1a; 
     --font: 'Crimson Text', serif;
     --secondary-font: 'Work Sans', sans-serif;
   }
@@ -104,9 +105,10 @@ body{
     align-items: center;
 }
 
+/*---------Aqui inicia el home---------*/
 #home {
     width: 100%;
-    padding: 5em 0;
+    padding: 12em 0;
     backdrop-filter: blur(1px);
     backdrop-filter: contrast(250px);
     position: relative;
@@ -114,12 +116,12 @@ body{
     flex-wrap: wrap-reverse;
 }
 
-#main::before {
+#home::before {
     content: "";
     width: 100%;
     height: 30em;
     position: absolute;
-    right: 25em;
+    right: 20em;
     z-index: -1;
     background: rgb(19, 19, 19);
   }
@@ -145,17 +147,13 @@ body{
 
 /*Imagen de perfil*/
 #home .user_img img {
-    width: 25rem;
-    height: 26rem;
+    width: 30rem;
+    height: 30rem;
+    /* width: 500px;
+    height: 500px; */
     border-radius: 50%;
     margin: 0 30px;
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.479);
-}
-
-#particles-js {
-    width: 100%;
-    position: absolute;
-    z-index: -1;
 }
 
 #home .user_info .btn {
@@ -166,25 +164,33 @@ body{
     cursor: pointer;
     text-decoration: none;
     border: 2px solid var(--secondary-color);
-    transition: all 0.4s;
+    transition: all 0.2s;
 }
 
 #home .user_info .btn:hover {
     background: var( --secondary-color );
 }
 
-/*About*/
+#particles-js {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+
+/*------------------------About--------------------*/
 
 .about {
     width: 100%;
     background: var( --about );
-    padding: 6em 0;
+    padding: 13em 0;
 }
 
 .about div{
     width: 40%;
     flex-direction: column;
     align-items: flex;
+    transition: all 0.2s
 }
 
 .about img {
@@ -209,6 +215,7 @@ body{
 .skills {
     width: 100%;
     margin: 2em 0;
+    padding: 8em 0;
     position: relative;
     flex-direction: column;
     overflow-x: hidden;
@@ -296,3 +303,139 @@ body{
 .habilidades .box i {
     margin-bottom: 0.1em;
 }
+
+.skills_head {
+    font-size: 6em;
+    font-family: var(--font);
+}
+
+
+/*--------------------projects ---------------------------*/
+.projects {
+    width: 100%;
+    padding: 15em 0;
+    position: relative;
+    flex-direction: column;
+    background-color: var( --projects );
+    overflow-x: hidden;
+}
+
+.projects::before,
+.projects::after {
+    content: "";
+    position: absolute;
+    width: 20em;
+    height: 20em;
+    background: #f953c6;
+    background: -webkit-linear-gradient(
+        to right,
+        #b91d73,
+        #f953c6
+    );
+    border-radius: 50%;
+}
+
+.projects::before {
+    left: -10em;
+    bottom: 0;
+}
+
+.projects::after {
+    right: -10em;
+    top: 8em;
+    background: #8e2de2;
+    background: -webkit-linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); 
+  background: linear-gradient(
+    to right,
+    #4a00e0,
+    #8e2de2
+  ); 
+}
+
+.projects .project_heading{
+    margin-bottom: 0.4em;
+    font-size: 6em;
+    font-family: var( --font );
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index:  1;
+}
+
+/*div de cada cuadro*/
+.container .card {
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius:  15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+/*contenido de cada tarjeta*/
+.container .card .content{
+    padding: 15px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+/*titulo de tarjeta*/
+.container .card .content h3 {
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+    margin-bottom: 15px;
+}
+
+/*Parrafo*/
+.container .card .content p {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.container .card .content .links {
+   display: flex;
+   justify-content: space-between;
+   padding: 10px 15px;
+
+}
+
+.container .card .content a{
+   position: relative;
+   display: inline-block;
+   padding: 4px 10px;
+   margin-top:  30px;
+   background: #fff;
+   color: #000;
+   border-radius: 20px;
+   text-decoration: none;
+   font-weight: 500;
+   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+   transition: all 0.4s;
+}
+
+.container .card .content a:hover {
+    color: #fff;
+    background: var( --secondary-color);
+}
+
