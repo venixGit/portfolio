@@ -31,7 +31,7 @@ body{
     color: var(--color);
 }
 
-/*Ancho maximo del div, pading justificado*/
+/*-----------------------Ancho maximo del div, pading justificado----------*/
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -439,3 +439,73 @@ body{
     background: var( --secondary-color);
 }
 
+/*-------------------FOOTER-------------------------*/
+footer {
+    width: 100%;
+    padding: 3em 0;
+    flex-direction: column;
+    background: #1a1a1a;
+}
+
+footer .social_icons{
+    margin-top: 1em;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer .social_icons a {
+    margin: 0 .8em;
+    border-radius:  50px;
+}
+
+footer .social_icons a i {
+    font-size:  1.8em;
+    padding: 0.2em;
+    transition: color 0.4s;
+}
+
+footer .social_icons a:hover i {
+    font-size: 1.8em;
+    padding: 0.2em;
+    color: rgba(54, 54, 54, 0.966);
+}
+
+/*----------------Responsive Design Media Query---------------*/
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+}
