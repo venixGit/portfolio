@@ -34,6 +34,27 @@ const ejecutarMenu = () => {
             navegacion.classList.remove('active');
         });
     }
+    
+    if(about.addEventListener){
+        about.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navegacion.classList.remove('active');
+        });
+    }
+
+    if(skills.addEventListener){
+        skills.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navegacion.classList.remove('active');
+        });
+    }
+
+    if(projects.addEventListener){
+        projects.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navegacion.classList.remove('active');
+        });
+    }
 }
 
 export const init = () => {
