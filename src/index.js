@@ -1,4 +1,4 @@
-// import { particlesJS } from './js/componentes';
+import { stickyNav } from './js/componentes';
 import './styles.css';
 
-
+stickyNav();

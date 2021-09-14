@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
 
 /*Letras sin subrayado*/
 *{
@@ -24,78 +26,13 @@
     --projects: #1a1a1a; 
     --font: 'Crimson Text', serif;
     --secondary-font: 'Work Sans', sans-serif;
+    --poppins-font: 'Poppins', sans-serif;
   }
 
 body{
     background-color: var(--bg);
     color: var(--color);
-}
-
-/*-----------------------Ancho maximo del div, pading justificado----------*/
-.max-width{
-    max-width: 1300px;
-    padding: 0 80px;
-    margin: auto;
-}
-
-/* navbar styling */
-.navbar{
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    padding: 30px 0;
-    font-family: 'Ubuntu', sans-serif; /*tipo de letra*/
-    transition: all 0.3s ease;
-}
-
-.navbar.barra{
-    padding: 15px 0;
-    background: rgb(31, 97, 141);
-}
-
-.navbar .max-width{
-    display: flex; /*Alinear con el logo*/
-    align-items: center; /*centrar los items*/
-    justify-content: space-between; /*justificar el especio de cada item*/
-}
-
-/*Colocar en horizontal el navbar*/
-.navbar .menu li{
-    list-style: none; /*Quitar viñetas*/
-    display: inline-block; /* alinear horizontal*/
-}
-
-.navbar .menu li a{
-    display: block;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    margin-left: 30px;
-    transition: color 0.3s ease;
-}
-
-.navbar .menu li a:hover{
-    color: black;
-}
-
-/*Cambiar de color al colocar el puntero*/
-.navbar.sticky .menu li a:hover{
-    color: #fff;
-}
-
-.logo a {
-    color: #fff;
-    font-size: 35px;
-    display: flex;
-    /* font-family: 'Ubuntu', sans-serif;  */
-}
-
-/* menu btn styling */
-.menu-btn{
-    color: #fff;
-    font-size: 23px;
-    cursor: pointer;
-    display: none;
+    min-height: 1000px;
 }
 
 /*clase de la seccion*/
@@ -105,6 +42,55 @@ body{
     align-items: center;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+/*Cambiar de color al bajar el con el scroll*/
+header .sticky {
+    background: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header .logo {
+    font-family: var(--poppins-font);
+    font-weight: 700;
+    font-size: 3em;
+    text-decoration: none;
+}
+
+header .logo span {
+    font-family: var(--poppins-font);
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+    display: flex;
+}
+
+header .navigation li {
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigation li a {
+    text-decoration: none;
+    font-weight: 300;
+}
 /*---------Aqui inicia el home---------*/
 #home {
     width: 100%;
@@ -164,11 +150,13 @@ body{
     cursor: pointer;
     text-decoration: none;
     border: 2px solid var(--secondary-color);
+    letter-spacing: 2px;
     transition: all 0.2s;
 }
 
 #home .user_info .btn:hover {
     background: var( --secondary-color );
+    letter-spacing: 6px;
 }
 
 #particles-js {
@@ -439,6 +427,7 @@ body{
     background: var( --secondary-color);
 }
 
+
 /*-------------------FOOTER-------------------------*/
 footer {
     width: 100%;
@@ -472,40 +461,3 @@ footer .social_icons a:hover i {
 }
 
 /*----------------Responsive Design Media Query---------------*/
-@media (max-width: 991px) {
-    .max-width{
-        padding: 0 50px;
-    }
-}
-
-@media (max-width: 947px){
-    .menu-btn{
-        display: block;
-        z-index: 999;
-    }
-    .menu-btn i.active:before{
-        content: "\f00d";
-    }
-    .navbar .menu{
-        position: fixed;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        top: 0;
-        background: #111;
-        text-align: center;
-        padding-top: 80px;
-        transition: all 0.3s ease;
-    }
-    .navbar .menu.active{
-        left: 0;
-    }
-    .navbar .menu li{
-        display: block;
-    }
-    .navbar .menu li a{
-        display: inline-block;
-        margin: 20px 0;
-        font-size: 25px;
-    }
-}
