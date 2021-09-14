@@ -12,3 +12,7 @@ const stickyNav = () => {
 export {
     stickyNav
 }
+
+// export const init = () => {
+//     stickyNav()l
+// }

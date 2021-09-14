@@ -47,7 +47,7 @@ header {
     top: 0;
     left:0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 10px 100px;
     z-index: 10000;
     display: flex;
     justify-content:  space-between;
@@ -56,10 +56,14 @@ header {
 }
 
 /*Cambiar de color al bajar el con el scroll*/
-header .sticky {
+.sticky {
     background: #fff;
     padding: 10px 100px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.sticky .logo {
+    color: #111
 }
 
 header .logo {
@@ -88,9 +92,21 @@ header .navigation li {
 }
 
 header .navigation li a {
+    font-family: var(--poppins-font);
     text-decoration: none;
     font-weight: 300;
+    letter-spacing: 1px;
 }
+header .navigation li a:hover {
+    color: #ff0157;
+    letter-spacing: 2px;
+}
+
+.sticky .navigation li a {
+    color: #111;
+}
+
+
 /*---------Aqui inicia el home---------*/
 #home {
     width: 100%;
