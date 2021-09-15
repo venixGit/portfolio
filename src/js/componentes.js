@@ -22,37 +22,34 @@ const menuDesplegable = () => {
         navegacion.classList.toggle('active');
     });
 }
-
-const holaMundo = () => {
-    console.log("ES EL HOME",)
+const desactivarMenu =() => {
+    menuToggle.classList.remove('active');
+    navegacion.classList.remove('active');
 }
+
 
 const ejecutarMenu = () => {
     if(home.addEventListener){
         home.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navegacion.classList.remove('active');
+            desactivarMenu();
         });
     }
     
     if(about.addEventListener){
         about.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navegacion.classList.remove('active');
+            desactivarMenu();
         });
     }
 
     if(skills.addEventListener){
         skills.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navegacion.classList.remove('active');
+            desactivarMenu();
         });
     }
 
     if(projects.addEventListener){
         projects.addEventListener('click', () => {
-            menuToggle.classList.remove('active');
-            navegacion.classList.remove('active');
+            desactivarMenu();
         });
     }
 }

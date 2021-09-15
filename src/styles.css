@@ -70,7 +70,7 @@ header {
 header .logo {
     font-family: var(--poppins-font);
     font-weight: 700;
-    font-size: 3em;
+    font-size: 2.5em;
     text-decoration: none;
 }
 
@@ -118,7 +118,7 @@ header .navigation li a:hover {
 /*---------Aqui inicia el home---------*/
 #home {
     width: 100%;
-    padding: 12em 0;
+    padding: 10em 0;
     backdrop-filter: blur(1px);
     backdrop-filter: contrast(250px);
     position: relative;
@@ -131,7 +131,7 @@ header .navigation li a:hover {
     width: 100%;
     height: 30em;
     position: absolute;
-    right: 20em;
+    right: 25em;
     z-index: -1;
     background: rgb(19, 19, 19);
   }
@@ -180,14 +180,14 @@ header .navigation li a:hover {
 
 #home .user_info .btn:hover {
     background: var( --secondary-color );
-    letter-spacing: 6px;
+    letter-spacing: 6px;/*extiende las letras*/
 }
 
-#particles-js {
+/* #particles-js {
     width: 100%;
     position: absolute;
     z-index: -1;
-}
+} */
 
 
 /*------------------------About--------------------*/
@@ -195,7 +195,7 @@ header .navigation li a:hover {
 .about {
     width: 100%;
     background: var( --about );
-    padding: 13em 0;
+    padding: 6em 0;
 }
 
 .about div{
@@ -206,12 +206,12 @@ header .navigation li a:hover {
 }
 
 .about img {
-    width: 35em;
+    width: 25em;
     margin: 2em;
 }
 
 .about_heading {
-    font-size: 1.4em;
+    font-size: 6em;
     color: var( --color );
     opacity: 0.6;
 }
@@ -227,7 +227,7 @@ header .navigation li a:hover {
 .skills {
     width: 100%;
     margin: 2em 0;
-    padding: 8em 0;
+    padding: 5em;
     position: relative;
     flex-direction: column;
     overflow-x: hidden;
@@ -325,7 +325,7 @@ header .navigation li a:hover {
 /*--------------------projects ---------------------------*/
 .projects {
     width: 100%;
-    padding: 15em 0;
+    padding: 2em 0;
     position: relative;
     flex-direction: column;
     background-color: var( --projects );
@@ -566,3 +566,91 @@ footer .social_icons a:hover i {
     }
 
 }
+
+@media (max-width: 1120px){
+    #home .user_img img {
+        width: 25em;
+        height: 25em;
+    }
+
+    .skills {
+        height: 100%;
+        padding: 5em 0;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .about div {
+        width: 70%;
+    }
+}
+
+@media (max-width: 990px){
+    .skills {
+        height: 100%;
+        padding: 5em 0;
+    }
+
+    .habilidades .box {
+        margin: 2em .6em;
+        width: 12em;
+        height: 8em;
+    }
+
+    .skills_head {
+        font-size: 5em;
+        font-family: var(--font);
+    }
+
+    .skills_head {
+        font-size: 5em;
+        font-family: var(--font);
+    }
+
+    .about_heading {
+        font-size: 5em;
+        font-family: var(--font);
+    }
+
+    .projects .project_heading {
+        margin-bottom: 0.4em;
+    }
+
+}
+
+@media (max-width: 700px){
+    body {
+        font-size: 13px;
+    }
+
+    .habilidades .box {
+        margin: 2em 0.5em;
+        width: 12em;
+        height: 8em;
+    }
+}
+
+@media (max-width: 450px) {
+    #home .user_img img{
+      width: 20em;
+      height: 20em;
+    }
+    .projects .container .card .icon{
+      height: 100%;
+      padding: 0.2em;
+    }
+    .projects .container .card {
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      padding: 2em 0.2em;
+    }
+  }
+
+  @media (max-width: 350px) {
+    body{
+      font-size: 8px;
+    }
+  }
