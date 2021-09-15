@@ -497,6 +497,10 @@ footer .social_icons a:hover i {
     color: #fff;
 }
 
+/*------------Menu Toggle -----------------------------------*/
+.toMenu {
+    display: none;
+}
 /*----------------Responsive Design Media Query---------------*/
 @media (max-width: 991px)
 {
@@ -535,6 +539,7 @@ footer .social_icons a:hover i {
     }
 
     .toMenu{
+        display: flex;
         width: 200px;
         height: 200px;
         backdrop-filter: blur(20px);
@@ -701,6 +706,7 @@ footer .social_icons a:hover i {
       height: 100%;
       padding: 2em 0.2em;
     }
+
   }
 
   @media (max-width: 360px) {
