@@ -48,7 +48,7 @@ header {
     top: 0;
     left:0;
     width: 100%;
-    padding: 10px 100px;
+    padding: 10px 50px;
     z-index: 10000;
     display: flex;
     justify-content:  space-between;
@@ -61,6 +61,7 @@ header {
     background: #fff;
     padding: 10px 100px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    /* display: none; */
 }
 
 .sticky .logo {
@@ -107,12 +108,12 @@ header .navigation li a:hover {
     color: #111;
 }
 
-.menuToggle{
+/* .menuToggle{
     color: #fff;
     font-size: 23px;
     cursor: pointer;
     display: none;
-}
+} */
 
 
 /*---------Aqui inicia el home---------*/
@@ -325,7 +326,7 @@ header .navigation li a:hover {
 /*--------------------projects ---------------------------*/
 .projects {
     width: 100%;
-    padding: 2em 0;
+    padding: 4em 0;
     position: relative;
     flex-direction: column;
     background-color: var( --projects );
@@ -500,14 +501,15 @@ footer .social_icons a:hover i {
 @media (max-width: 991px)
 {
     .sticky{
-        padding: 10px 20px;
+        /* padding: 10px 20px; */
+        display: none;
     }
 
     header .navigation {
         display: none; /*oculta la navegacion*/
     }
     
-     .navigation.active {
+    .navigation.active {
         width: 100%;
         height: calc(100% - 68px);
         position: fixed;
@@ -532,7 +534,59 @@ footer .social_icons a:hover i {
        font-size: 1.9em;
     }
 
-    .menuToggle {
+    .toMenu{
+        width: 200px;
+        height: 200px;
+        backdrop-filter: blur(20px);
+        border-radius: 15px;
+        background: rgba(20, 20, 20, 0.178);
+        position: fixed;
+        top: 250px;
+        right: 10px;
+        z-index: 100;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: all .4s;
+      }
+    .toMenu .box a{
+    flex-direction: column;
+    text-decoration: none;
+    }
+    .toMenu .box a i{
+    font-size: 18px;
+    }
+    .toMenu .box a p{
+    font-size: 12px;
+    margin-top: 8px
+    }
+    .toMenu .box:nth-child(2){
+    width: 100%;
+    justify-content: space-evenly;
+    }
+    .toMenu .box input{
+    width: 40px;
+    height: 40px;
+    -webkit-appearance: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background: rgb(31, 31, 31);
+    border: 6px solid rgba(255, 255, 255, 0.459);
+    }
+    .toMenu.active .box input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    }
+    .toMenu.active{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    }
+
+    /* .menuToggle {
         display: block;
         position: relative;
         width: 40px;
@@ -541,29 +595,29 @@ footer .social_icons a:hover i {
         background-repeat: no-repeat;
         background-position: center;
         cursor: pointer;
-        /* display: none; */
-    }
-
-    .menuToggle #close {
         display: none;
-    }
+    } */
+
+    /* .menuToggle #close {
+        display: none;
+    } */
 
     /*icono de menu 'X' */
-    .menuToggle.active #close{
+    /* .menuToggle.active #close{
         display: block;
         background-size: 25px;
         background-repeat: no-repeat;
         background-position: center;
-    }
+    } */
     /*icono de menu '='*/
-    .menuToggle.active #open{
+    /* .menuToggle.active #open{
         display: none;
-    }
+    } */
 
     /*invertir el color cuando no hay scroll*/
-    .sticky .menuToggle{
+    /* .sticky .menuToggle{
         filter: invert(1);
-    }
+    } */
 
 }
 
@@ -649,8 +703,31 @@ footer .social_icons a:hover i {
     }
   }
 
-  @media (max-width: 350px) {
+  @media (max-width: 360px) {
     body{
       font-size: 8px;
     }
+    header {
+        width: 100%;
+        padding: 10px 100px;
+    }
+
+    .sticky {
+        display: none;
+    }
+    
+    .menuToggle {
+        display: none;
+    }
+
+    header .logo {
+        font-size: 4em;
+        text-decoration: none;
+    }
+    
+    header .logo span {
+        font-size: 1em;
+        text-decoration: none;
+    }
+
   }
