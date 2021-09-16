@@ -184,11 +184,11 @@ header .navigation li a:hover {
     letter-spacing: 6px;/*extiende las letras*/
 }
 
-/* #particles-js {
+#particles-js {
     width: 100%;
     position: absolute;
     z-index: -1;
-} */
+}
 
 
 /*------------------------About--------------------*/

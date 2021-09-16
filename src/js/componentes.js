@@ -1,5 +1,5 @@
 import { VanillaTilt } from './vanilla-tilt.js';
-
+import {hola} from './app.js';
 
 const header      = document.querySelector('header');
 const projects    = document.querySelector('.proyecto');
@@ -87,5 +87,6 @@ export const init = () => {
     botonMenu();
     menuLinks();
     animacionCard();
+    // particlesJS();
     // ejecutarMenu();
 }
