@@ -20,7 +20,7 @@ const stickyNav = () => {
 const botonMenu = () => {
     btn.addEventListener('click', () => {
         menuMovil.classList.toggle('active');
-        console.log("hola mundo");
+        // console.log("hola mundo");
     });
 }
 
