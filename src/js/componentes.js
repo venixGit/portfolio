@@ -1,14 +1,17 @@
+import { VanillaTilt } from './vanilla-tilt.js';
+
 
 const header      = document.querySelector('header');
-// const menuToggle  = document.querySelector('.menuToggle');
-const navegacion  = document.querySelector('.navigation');
-const home        = document.querySelector('.inicio');
-const about       = document.querySelector('.acerca');
-const skills      = document.querySelector('.habilidad');
 const projects    = document.querySelector('.proyecto');
 const menuMovil   = document.querySelector('.toMenu');
 const btn         = document.querySelector('#btn');
 const menu        = document.querySelectorAll('.menu');
+const tarjeta     = document.querySelectorAll('.card');
+// const menuToggle  = document.querySelector('.menuToggle');
+// const navegacion  = document.querySelector('.navigation');
+// const home        = document.querySelector('.inicio');
+// const about       = document.querySelector('.acerca');
+// const skills      = document.querySelector('.habilidad');
 
 /*--------------EVENTOS--------------- */
 const stickyNav = () => {
@@ -30,6 +33,15 @@ const menuLinks = () => {
             menuMovil.classList.toggle('active');
         });
     })
+}
+
+const animacionCard = () => {
+    VanillaTilt.init( tarjeta, {
+        max: 30,
+        scale: 1.1,
+        glare: true,
+        "max-glare": 0.5
+    });
 }
 
 const menuDesplegable = () => {
@@ -74,5 +86,6 @@ export const init = () => {
     menuDesplegable();
     botonMenu();
     menuLinks();
+    animacionCard();
     // ejecutarMenu();
 }

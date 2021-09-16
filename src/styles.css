@@ -410,6 +410,10 @@ header .navigation li a:hover {
     transition: 0.5s;
 }
 
+/* .container .card .content .icon {
+    transform-style: preserve-3d;
+    transform: translateZ(20px);
+} */
 /*titulo de tarjeta*/
 .container .card .content h3 {
     font-size: 1.8em;
@@ -430,7 +434,6 @@ header .navigation li a:hover {
    display: flex;
    justify-content: space-between;
    padding: 10px 15px;
-
 }
 
 .container .card .content a{
