@@ -7,6 +7,7 @@ const menuMovil   = document.querySelector('.toMenu');
 const btn         = document.querySelector('#btn');
 const menu        = document.querySelectorAll('.menu');
 const tarjeta     = document.querySelectorAll('.card');
+const btnCv       = document.querySelector('#btnCv');
 // const menuToggle  = document.querySelector('.menuToggle');
 // const navegacion  = document.querySelector('.navigation');
 // const home        = document.querySelector('.inicio');
@@ -20,6 +21,7 @@ const stickyNav = () => {
     });
 }
 
+/*Boton de menu para pantallas pequeñas */
 const botonMenu = () => {
     btn.addEventListener('click', () => {
         menuMovil.classList.toggle('active');
@@ -27,6 +29,7 @@ const botonMenu = () => {
     });
 }
 
+/*Clase que activa el menu para pantallas pequeñas */
 const menuLinks = () => {
     menu.forEach((event) => {
         event.addEventListener('click', () => {
@@ -35,12 +38,20 @@ const menuLinks = () => {
     })
 }
 
+/*Animacion 3d de los projectos */
 const animacionCard = () => {
     VanillaTilt.init( tarjeta, {
         max: 30,
         scale: 1.1,
         glare: true,
-        "max-glare": 0.5
+        "max-glare": 0.3
+    });
+}
+
+/*Descargar cv en pdf */
+const descargarArchivo = () => {
+    btnCv.addEventListener('click', () => {
+        
     });
 }
 
@@ -88,6 +99,7 @@ export const init = () => {
     menuLinks();
     animacionCard();
     efectosJs();
+    // descargarArchivo();
     // particlesJS();
     // ejecutarMenu();
 }
