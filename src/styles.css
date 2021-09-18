@@ -200,8 +200,16 @@ header .navigation li a:hover {
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.479);
 }
 
-#home .user_info .btn {
-    padding: 0.6em 2em;
+#home .user_info .resume {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 1em;
+    text-align: center;
+}
+
+#home .user_info .btn{
+    padding: 0.4em 1em;
     background: none;
     color: var(--color);
     font-size: 1.1em;
@@ -212,8 +220,25 @@ header .navigation li a:hover {
     transition: all 0.2s;
 }
 
+#home .user_info .btnEs{
+    padding: 0.4em 1em;
+    background: none;
+    color: var(--color);
+    font-size: 1.1em;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #ff2e63;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+}
+
 #home .user_info .btn:hover {
     background: var( --secondary-color );
+    letter-spacing: 6px;/*extiende las letras*/
+}
+
+#home .user_info .btnEs:hover {
+    background: #ff2e63;
     letter-spacing: 6px;/*extiende las letras*/
 }
 
